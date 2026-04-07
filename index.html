@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For You</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Container */
+.container {
+  text-align: center;
+}
+
+/* Heart */
+.heart {
+  font-size: 50px;
+  cursor: pointer;
+  animation: pulse 1.5s infinite;
+  color: #ff4d6d;
+}
+
+/* Heart animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Scroll */
+.scroll {
+  width: 400px;
+  height: 500px;
+  background: #f5e6c8;
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(255,255,255,0.1);
+  padding: 25px;
+  margin-top: 20px;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 1.5s ease;
+  overflow-y: auto;
+}
+
+/* Open scroll */
+.scroll.open {
+  transform: scaleY(1);
+}
+
+/* Letter text */
+.letter {
+  font-style: italic;
+  font-size: 20px;
+  color: #2b1b0f;
+  line-height: 1.7;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+  text-align: center;
+}
+
+/* Show text */
+.scroll.open .letter {
+  opacity: 1;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="heart" onclick="openScroll()">❤️</div>
+
+  <div class="scroll" id="scroll">
+    <div class="letter">
+      Happy Birthday Daksh. 
+
+I'm not even supposed to write this, Because of no contact. But I've been wanting to write this for quite some days now, so I just decided to give it. (Frankly, I'd give this even if we ended things haha) I'm not good at expressing myself on call but letters I can do, so here it goes. 
+
+You complete me, my love. And I've told you this multiple times by now. I'm not quite sure if you even understand what I mean by it. Before I met you, I've talked to a handful of men, Men I tried to love, men I thought I loved. But they never got me, It was me who always compromised myself in some way to fit into their perspective of love. But when I met you, I never had to try, you were perfect. You're perfect.  I love how I can talk to you for hours without even noticing the time, I love how you laugh, your laughter is all I wanna hear. I love the way you diss people, your creative insults. I love the way you're so emotionally intelligent even though you try to shield yourself by being nonchalant. I love how pure your heart is.  You're a pure soul. I'm not the one to wait for somebody, I can't. I'd lose interest or move on. But man for you I'd wait a lifetime fuck 8 months. And no matter how cheesy or corny and cringe this sounds, it's true. Everybody after you seems lame. You've made me physically incapable of loving somebody else because I'd just go around searching for somebody who'd be just like you, Who understands me like you do. 
+
+This no contact thing, well it's hell obviously. But I'm pretty sure it is what you need. I'm pretty sure you'll find somebody new, somebody better. I hope they're good for you, They'll treat you with care and kindness (I hope you do too bonnie blue). Hell we may not even ever meet and it honestly scares me there'll be no December. But no matter how far apart we're, Years of just no contact. You'll always find me here, you can always come to me. As a friend, Lover or just somebody that you used to know. I will always be here. Just a text away. You deserve to be loved the same you love baby. I know it's scary to let someone in but I hope you do, Trust somebody. It can be anybody it does not limit to me because again, I just want to see you happy.  Because as selfish as I am to keep you all to myself, I wanna see you happy too, and if it means not seeing you with me then mein kaun hoti hoon rokne waali. 
+
+You make me wanna be better for you, You make me wanna be fit. You make me wanna learn how to not overthink and trust you. You make me wanna learn how to be gentle with you. I do not know what I mean to you, and I genuinely don't wanna know. But my perception of you will always be 'home'. You don't have to feel guilty or something or take pity on me and be with me. Or like the last option left in you're list. Trust me, there are a lot of fishes in the sea, you'll find your fish soon enough<3
+
+I cannot physically write you this, And I cannot give you  anything rn (I'm broke as shit, parlays are killing me) but maybe in December, I'll come pick you up? With black roses and lillies, nervous as shit? Haha. I genuinely cannot wait for the day. Even if it doesn't happen, I will always, always cherish the memories we have.  I love you baby, and until (if) we meet, Take care of yourself. And A very happy Birthday to you , May this day be as bright as you're. <3
+
+
+  
+    </div>
+  </div>
+</div>
+
+<script>
+function openScroll() {
+  document.getElementById("scroll").classList.add("open");
+  document.querySelector(".heart").style.display = "none";
+}
+</script>
+
+</body>
+</html>
