@@ -9,80 +9,48 @@
 <style>
 body {
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
   background: black;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Cormorant Garamond', serif;
 }
 
-/* Container */
-.container {
-  text-align: center;
-}
-
-/* Heart */
-.heart {
-  font-size: 50px;
-  cursor: pointer;
-  animation: pulse 1.5s infinite;
-  color: #ff4d6d;
-}
-
-/* Heart animation */
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-  100% { transform: scale(1); }
-}
-
-/* Scroll */
-.scroll {
-  width: 400px;
-  height: 500px;
+/* Fullscreen parchment */
+.paper {
+  width: 92vw;
+  min-height: 92vh;
   background: #f5e6c8;
-  border-radius: 10px;
-  box-shadow: 0 0 40px rgba(255,255,255,0.1);
-  padding: 25px;
-  margin-top: 20px;
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 1.5s ease;
-  overflow-y: auto;
+  padding: 50px;
+  box-sizing: border-box;
+  box-shadow: 0 0 60px rgba(255,255,255,0.08);
+  display: flex;
+  justify-content: center;
 }
 
-/* Open scroll */
-.scroll.open {
-  transform: scaleY(1);
-}
-
-/* Letter text */
+/* Letter styling */
 .letter {
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: 20px;
+  font-size: 24px;
   color: #2b1b0f;
-  line-height: 1.7;
-  opacity: 0;
-  transition: opacity 1.5s ease;
+  line-height: 1.9;
   text-align: center;
-}
+  max-width: 850px;
 
-/* Show text */
-.scroll.open .letter {
-  opacity: 1;
+  /* ink effect */
+  text-shadow: 
+    0.5px 0.5px 0 rgba(0,0,0,0.2),
+    1px 1px 2px rgba(0,0,0,0.15);
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-  <div class="heart" onclick="openScroll()">❤️</div>
-
-  <div class="scroll" id="scroll">
-    <div class="letter">
-      Happy Birthday Daksh. 
+<div class="paper">
+  <div class="letter">
+    Happy Birthday Daksh. 
 
 I'm not even supposed to write this, Because of no contact. But I've been wanting to write this for quite some days now, so I just decided to give it. (Frankly, I'd give this even if we ended things haha) I'm not good at expressing myself on call but letters I can do, so here it goes. 
 
@@ -96,16 +64,8 @@ I cannot physically write you this, And I cannot give you  anything rn (I'm brok
 
 
   
-    </div>
   </div>
 </div>
-
-<script>
-function openScroll() {
-  document.getElementById("scroll").classList.add("open");
-  document.querySelector(".heart").style.display = "none";
-}
-</script>
 
 </body>
 </html>
